@@ -22,7 +22,6 @@ const signIn = () => {
 
   const handleSubmit=async ()=>{
     if(!emailRef.current || !passwordRef.current ){
-      console.log(emailRef.current,passwordRef.current)
       Alert.alert("Sign In",'Please fill in all the information!')
     }
     //login process
