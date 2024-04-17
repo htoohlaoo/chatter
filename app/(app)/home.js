@@ -35,7 +35,7 @@ const home = () => {
     <View className='flex-1 bg-white'>
       {
       (users?.length > 0 )
-      ? <ChatList users={users} />
+      ? <ChatList users={users} currentUser={user}/>
       :(
         <View className='flex items-center' style={{top:hp(30)}}>
           <ActivityIndicator size='large' color='indigo' />

@@ -2,7 +2,7 @@ import { View, Text, FlatList } from 'react-native'
 import React from 'react'
 import ChatItem from './ChatItem'
 import { useRouter } from 'expo-router'
-const ChatList = ({users}) => {
+const ChatList = ({users,currentUser}) => {
   const router = useRouter();
   return (
     <View className='flex-1'>
@@ -12,9 +12,9 @@ const ChatList = ({users}) => {
             flex:1,
             paddingVertical:25
         }}
-        keyExtractor={(item)=>Math.random()}
+        keyExtractor={(item)=>{return Math.random()}}
         showsVerticalScrollIndicator={false}
-        renderItem={({item,index})=><ChatItem item={item} noBorder={index+1 == users.length} index={index} router={router} />}
+        renderItem={({item,index})=><ChatItem currentUser={currentUser} item={item} noBorder={index+1 == users.length} index={index} router={router} />}
       />
     </View>
   )

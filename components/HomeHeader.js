@@ -28,7 +28,6 @@ const HomeHeader = () => {
         console.log('Profile handled')
     }
     const handleLogout = async () =>{
-        console.log('Profile logout')
         await logout();
     }
   return (
